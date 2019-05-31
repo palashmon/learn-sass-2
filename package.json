@@ -1,0 +1,24 @@
+{
+  "name": "learn-sass-2",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Playground to learn and practice more about SASS",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palashmon/sass-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "Palash Mondal",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-strip-css-comments": "^2.0.0"
+  }
+}
