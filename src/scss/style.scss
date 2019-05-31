@@ -1,4 +1,7 @@
-/* VARIABLES */
+// Importing Montserrat from google font api
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+/*#region Variables */
 
 // Colours
 $deepBlue: #032f3e;
@@ -8,11 +11,70 @@ $offWhite: #f8f9fb;
 $bannerHeading: 42px;
 $sectionHeading: 24px;
 
-#main-nav {
-  background: $deepBlue;
+// Paddings
+$padding: 15px;
+$borders: 15px;
+
+/*#endregion*/
+
+/*#region Main styling starts here */
+body,
+html {
+  height: 100%;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+/*#endregion*/
+
+/*#region Main Nav Styles */
+#main-nav {
+  background: $deepBlue;
+
+  // Nesting Styles
+  ul {
+    width: 100%;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  // But not nesting styles too deep
+  // So, that it is easily readable
+  li {
+    float: left;
+    width: (100% / 6);
+  }
+
+  a {
+    color: $offWhite;
+    text-decoration: none;
+    padding: $padding;
+    display: block;
+    text-align: center;
+    &:hover {
+      background: lighten($deepBlue, 6);
+    }
+  }
+}
+/*#endregion*/
+
+/*#region Generic Styles */
+
+// All section headers
 section h1 {
   color: $deepBlue;
   font-size: $sectionHeading;
 }
+
+// Responsive banner images
+.responsive {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/*#endregion*/
