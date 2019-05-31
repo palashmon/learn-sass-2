@@ -8,10 +8,10 @@ const stripCssComments = require('gulp-strip-css-comments');
 gulp.task('sass', function() {
   return (
     gulp
-      .src(['src/scss/*.scss'])
+      .src(['src/scss/style.scss'])
 
       // For learning purpose we are using expanded
-      .pipe(sass({ outputStyle: 'expanded' }))
+      .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
       .pipe(
         autoprefixer({
           browsers: ['last 2 versions'],
