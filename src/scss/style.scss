@@ -88,4 +88,11 @@ section h1 {
   }
 }
 
+#projects li {
+  @include grid(6, 2%);
+  img {
+    width: 100%;
+  }
+}
+
 /*#endregion*/

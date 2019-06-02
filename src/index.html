@@ -70,20 +70,31 @@
       <div class="wrapper">
         <h1>Our Projects</h1>
         <ul>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
-          <li><img src="http://placehold.it/150x150" /></li>
+          <li><img class="project-img" /></li>
+          <li><img class="project-img" /></li>
+          <li><img class="project-img" /></li>
+          <li><img class="project-img" /></li>
+          <li><img class="project-img" /></li>
+          <li><img class="project-img" /></li>
+          <li><img class="project-img" /></li>
+          <li><img class="project-img" /></li>
+          <li><img class="project-img" /></li>
+          <li><img class="project-img" /></li>
+          <li><img class="project-img" /></li>
+          <li><img class="project-img" /></li>
         </ul>
       </div>
     </section>
+
+    <script>
+      (function() {
+        // Load sample images
+        const imgs = document.querySelectorAll('.project-img');
+        imgs.forEach((img, i) => {
+          if (i === 5 || i === 7) i += 10;
+          img.src = `https://picsum.photos/id/${200 + i}/150`;
+        });
+      })();
+    </script>
   </body>
 </html>
