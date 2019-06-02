@@ -14,11 +14,7 @@
   // Nesting Styles
   ul {
     width: 100%;
-    &:after {
-      content: '';
-      display: block;
-      clear: both;
-    }
+    @include clearFix;
   }
 
   // But not nesting styles too deep
@@ -47,6 +43,32 @@
 section h1 {
   color: $deepBlue;
   font-size: $sectionHeading;
+}
+
+#services {
+  li {
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  img {
+    width: 60%;
+    margin: 20px 20%;
+  }
+
+  a {
+    text-decoration: none;
+    color: $deepBlue;
+    font-weight: bold;
+    &:hover {
+      color: complement($deepBlue);
+    }
+  }
+
+  @include clearFix;
+  margin-bottom: 60px;
 }
 
 #lead-banner {
